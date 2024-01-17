@@ -4,8 +4,8 @@ class Hero
     private $name;
     private $pointsDeVieHero = 100;
 
-    public function __construct(string $hero){  
-        $this->name = $hero;
+    public function __construct(array $hero){  
+        $this->name = $hero['name'];
     }
 
 

@@ -21,15 +21,17 @@ class HeroesManager
         $hero->setPointsDeVieHero(100);
     }
 
-    public function findAllAlive(PDO $db){
+    public function findAllAlive(){
         // Assuming $db is the correct database connection
-        $query = $db->prepare("SELECT * FROM user WHERE health_point > 0");
+        $query = $this->db->prepare("SELECT * FROM user WHERE health_point > 0");
         $query->execute(); // You need to execute the query to get results
        $users= $query->fetchAll(); 
-       $this->heroes[] = $users;
-       return $this->heroes;
-
-
+       foreach($users as $user){
+        $newHero=new Hero($user);
+       $this->heroes[] = $newHero;
+       
+    }
+    return $this->heroes;
     }
 
 
