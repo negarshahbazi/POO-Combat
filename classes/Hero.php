@@ -1,28 +1,45 @@
 <?php
-// Définit la classe Hero avec :
-// 2 propriétés :
-// Son nom (unique).
-// Ses points de vie.
-// 1 méthode :
-// frapper un monstre.
 class Hero
-{
-    private $nomHero;
-    private $pointsDeVieHero;
+{   private $id;
+    private $name;
+    private $pointsDeVieHero = 100;
 
-    public function __construct($hero)
-    {
-        $this->nomHero = $hero['name'];
-        $this->pointsDeVieHero = $hero['health_point'];
+    public function __construct(string $hero){  
+        $this->name = $hero;
     }
-    public function getNomHero()
+
+
+
+    public function setId($id)
     {
-        $this->nomHero;
+        $this->id=$id;
     }
+    public function getId()
+    {
+        $this->id;
+    }
+
+
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+
+    public function setPointsDeVieHero($pointsDeVieHero)
+    {
+        $this->pointsDeVieHero=$pointsDeVieHero;
+    }
+
     public function getPointsDeVieHero()
     {
-        $this->pointsDeVieHero;
+        return $this->pointsDeVieHero;
     }
+
+
+
+
 
 public function hit(){
 

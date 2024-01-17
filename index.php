@@ -2,16 +2,12 @@
 require_once('./config/autoload.php');
 require_once('./config/db.php');
 
-
-if (isset($_POST['name']) && !empty($_POST['name'])) {
+if (isset($_POST['name']) && !empty($_POST['name'])&& isset($_POST['submit'])) {
+    // var_dump($_POST['name']);
     $newHero = new HeroesManager($db);
-    $newHero->add(new Hero($hero));
+    $newHero->add(new Hero($_POST['name']) );
+    // $newHero->findAllAlive();
 }
-
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,12 +31,14 @@ if (isset($_POST['name']) && !empty($_POST['name'])) {
                 <label for=""><h5 class="">Nom du héros :</h5> </label>
                 <input type="text" name="name" class="m-2">
                 </div>
-                <div>
+                <!-- <div>
                 <label for=""><h5>Type de héros :</h5> </label>
                 <input type="text" name="name" value="Guerrier" class="m-2">
-                </div>
+                </div> -->
                 <div>
-                <a href="#" class="btn btn-primary m-2" name="submit">Créer mon héros</a>
+                <input type="submit" name="submit" class="  btn btn-primary m-2" value="Créer mon héros">
+<!-- 
+                <a href="#" class="btn btn-primary m-2" name="submit">Créer mon héros</a> -->
                 </div>
             </div>
         </div>
