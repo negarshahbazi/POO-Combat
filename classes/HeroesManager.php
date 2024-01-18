@@ -28,13 +28,29 @@ class HeroesManager
        $users= $query->fetchAll(); 
        foreach($users as $user){
         $newHero=new Hero($user);
+        $newHero->setId($user['id']);
        $this->heroes[] = $newHero;
-       
     }
+
     return $this->heroes;
     }
 
 
+public function find($id){
+    $query = $this->db->query("SELECT * FROM user WHERE id=".$id);
+    $fightHero=$query->fetch();
+    $hero = new Hero($fightHero);
+    return  $hero;
+}
+
+public function update(Hero $hero){
+    $query = $this->db->prepare("UPDATE user SET health_point = :health_point WHERE id = :id");
+    $query->execute([
+        ':health_point'=> $hero->getPointsDeVieHero(),
+        ':id'=> $hero->getId(),
+    ]);
+  
+}
 }
 
 

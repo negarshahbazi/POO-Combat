@@ -6,6 +6,7 @@ class Hero
 
     public function __construct(array $hero){  
         $this->name = $hero['name'];
+     
     }
 
 
@@ -16,7 +17,7 @@ class Hero
     }
     public function getId()
     {
-        $this->id;
+        return $this->id;
     }
 
 
@@ -37,13 +38,45 @@ class Hero
         return $this->pointsDeVieHero;
     }
 
+   
 
 
 
+public function hit(Monster $monster){
+  // Générez des dégâts aléatoires par le héros, par exemple entre 5 et 20
+  $damage = rand(0, 50);
+  $monsterHealtpoint=$monster->getPointsDeVieMonster();
+  $monster->setPointsDeVieMonster($monsterHealtpoint-$damage);
 
-public function hit(){
+  // Vous pouvez également ajouter des logiques supplémentaires ici si nécessaire
 
+  return $damage;
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+// public function receiveDamage($damage)
+// {
+//     // Deduct the received damage from the hero's health points
+//     $this->setPointsDeVieHero($this->getPointsDeVieHero() - $damage);
+
+//     // Ensure the hero's health points don't go below zero
+//     if ($this->getPointsDeVieHero() < 0) {
+//         $this->setPointsDeVieHero(0);
+//     }
+// }
 }
+
+
+

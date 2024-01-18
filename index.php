@@ -2,11 +2,13 @@
 require_once('./config/autoload.php');
 require_once('./config/db.php');
 
+
 $newHero = new HeroesManager($db);
 if (isset($_POST['name']) && !empty($_POST['name']) && isset($_POST['submit'])) {
   $newHero->add(new Hero(['name' => $_POST['name']]));
 }
 $users = $newHero->findAllAlive();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,6 +35,7 @@ $users = $newHero->findAllAlive();
           </label>
           <input type="text" name="name" class="m-2">
         </div>
+
         <!-- <div>
                 <label for=""><h5>Type de héros :</h5> </label>
                 <input type="text" name="name" value="Guerrier" class="m-2">
@@ -45,17 +48,15 @@ $users = $newHero->findAllAlive();
     </div>
   </form>
 
-
   <!-- cart -->
   <?php foreach ($users as $user) { ?>
-
-    <form action="./fight.php" class="d-flex justify-content-center align-items-center  text-center ">
-      <div class="card  bg-dark m-5" style="width: 400px;">
+    <form action="./fight.php" method="post" class="d-flex justify-content-center align-items-center  text-center ">
+      <div class="card  bg-dark m-5 col-6" style="width: 400px;">
         <div class="row  m-1">
           <div class="col-md-6">
             <h5 class="card-title text-danger">Héro existant</h5>
 
-            <img src="..." class="img-fluid rounded-start" alt="...">
+            <img src="./assets/combat1.gif" class="img-fluid rounded-start" alt="...">
           </div>
           <div class="col-md-6">
             <div class="card-body">

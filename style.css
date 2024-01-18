@@ -13,3 +13,11 @@
 .form{
     margin-top: 200px;
 }
+.fightPage{
+  background-image: url(./assets/back\ combat.jpg);
+  background-repeat: no-repeat;
+  background-size: cover
+}
+.image{
+/* margin-top: 300px; */
+}
