@@ -1,7 +1,13 @@
 <?php
 class FightsManager {
     public function createMonster() {
-        $newMonster = new Monster();
+         // Automatically assign types to monsters
+         $types = ['ogre', 'sorcier', 'fantassin'];
+         $randomType = $types[array_rand($types)];
+ 
+         $newMonster = new Monster($randomType);
+         
+       
         $newMonster->setNomMonster('Toto');
         $newMonster->setPointsDeVieMonster(100);
         return $newMonster;

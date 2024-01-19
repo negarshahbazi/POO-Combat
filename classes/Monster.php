@@ -1,10 +1,13 @@
 <?php
 class Monster{
+    private $type;
 
     private string $nomMonster;
-    private int $pointsDeVieMonster;
+    private int $pointsDeVieMonster=100;
 
-
+public function __construct($type){
+$this->type=$type;
+}
 public function setNomMonster($nomMonster){
     $this->nomMonster=$nomMonster;
 }
@@ -18,6 +21,9 @@ public function getPointsDeVieMonster(){
   return  $this->pointsDeVieMonster;
 }
 
+public function getType(){
+    return  $this->type;
+  }
 
 
 public function hit(Hero $hero){

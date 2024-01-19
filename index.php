@@ -2,10 +2,14 @@
 require_once('./config/autoload.php');
 require_once('./config/db.php');
 
-
+// var_dump($_POST['type']);
 $newHero = new HeroesManager($db);
-if (isset($_POST['name']) && !empty($_POST['name']) && isset($_POST['submit'])) {
-  $newHero->add(new Hero(['name' => $_POST['name']]));
+if (isset($_POST['name']) && !empty($_POST['name']) && isset($_POST['submit']) && isset($_POST['type'])) {
+  $newHero->add(new Hero([
+    'name' => $_POST['name'],
+    'type'=>$_POST['type']
+  
+  ]));
 }
 $users = $newHero->findAllAlive();
 
@@ -36,10 +40,15 @@ $users = $newHero->findAllAlive();
           <input type="text" name="name" class="m-2">
         </div>
 
-        <!-- <div>
-                <label for=""><h5>Type de héros :</h5> </label>
-                <input type="text" name="name" value="Guerrier" class="m-2">
-                </div> -->
+        <div class="d-flex">
+        <h5>Type de héros :</h5>
+          <select name="type" id="">
+            <option value="Guerrier">Guerrier</option>
+            <option value="mage">mage</option>
+            <option value="archer">archer</option>
+              
+                </select>
+                </div>
         <div>
           <input type="submit" name="submit" class="  btn btn-primary m-2" value="Créer mon héros">
 

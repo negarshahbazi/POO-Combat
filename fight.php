@@ -33,11 +33,13 @@ $heroesManager->update($hero);
 
   <div class="row d-flex justify-content-center align-items-center">
     <div class="col-4">
-      <h1 class="text-white">Toto</h1>
+      <h1 class="text-white"><?php echo $monster->getNomMonster() ?></h1>
+      <h3 class="text-danger">Type :<?php echo $monster->getType() ?></h3>
     </div>
     <div class="col-4"><img src="./assets/vs;.gif" alt=""></div>
     <div class="col-4">
       <h1 class="text-white"><?php echo $hero->getName() ?></h1>
+      <h3 class="text-danger">Type :<?php echo $hero->getType() ?></h3>
     </div>
   </div>
 
