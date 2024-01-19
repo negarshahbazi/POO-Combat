@@ -1,8 +1,8 @@
 <?php
 class Monster{
 
-    private $nomMonster;
-    private $pointsDeVieMonster;
+    private string $nomMonster;
+    private int $pointsDeVieMonster;
 
 
 public function setNomMonster($nomMonster){
@@ -39,7 +39,7 @@ public function hit(Hero $hero){
 
 
 
-  
+
 //   public function receiveDamage($damage)
 // {
 //     // Deduct the received damage from the hero's health points
