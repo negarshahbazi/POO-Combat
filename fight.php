@@ -5,7 +5,8 @@ $heroesManager = new HeroesManager($db);
 
 if (isset($_POST['id'])) {
   $hero = $heroesManager->find($_POST['id']);
-}
+  var_dump($hero);
+  }
 // démarrage du fight 
 $fightManager = new FightsManager();
 $monster = $fightManager->createMonster();

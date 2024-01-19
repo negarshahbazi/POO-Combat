@@ -10,6 +10,7 @@ class FightsManager {
        
         $newMonster->setNomMonster('Toto');
         $newMonster->setPointsDeVieMonster(100);
+        $newMonster->getPointsDeVieMonster();
         return $newMonster;
     }
 
@@ -20,6 +21,7 @@ class FightsManager {
             // Le monstre attaque en premier
             $damageToHero = $monster->hit($hero);          
             $combatLog[] = $monster->getNomMonster() . " attaque ".$hero->getName()." et lui inflige " . $damageToHero . " points de dégâts.";
+           
 
             // Vérifier si le héros est toujours en vie
             if ($hero->getPointsDeVieHero() <= 0) {
@@ -30,6 +32,9 @@ class FightsManager {
             // Si le héros survit, il attaque le monstre
             $damageToMonster = $hero->hit($monster);
             $combatLog[] = $hero->getName()."attaque " . $monster->getNomMonster() . " et lui inflige " . $damageToMonster . " points de dégâts.";
+           
+
+
 
             // Vérifier si le monstre est toujours en vie
             if ($monster->getPointsDeVieMonster() <= 0) {
