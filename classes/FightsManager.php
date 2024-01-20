@@ -25,7 +25,7 @@ class FightsManager {
 
             // Vérifier si le héros est toujours en vie
             if ($hero->getPointsDeVieHero() <= 0) {
-                $combatLog[] = "c'est fini";
+                $combatLog[] = "le combat est terminé et ".$hero->getName()."a perdu";
                 break;
             }
 
@@ -38,7 +38,7 @@ class FightsManager {
 
             // Vérifier si le monstre est toujours en vie
             if ($monster->getPointsDeVieMonster() <= 0) {
-                $combatLog[] ="c'est fini.";
+                $combatLog[] ="le combat est terminé et ".$monster->getNomMonster()."a perdu";
                 break;
             }
         }

@@ -47,7 +47,7 @@ class Hero
 
 
     public function hit(Monster $monster){
-        // Générez des dégâts aléatoires par le héros, par exemple entre 5 et 20
+        // Générez des dégâts aléatoires par le héros
         $damage = rand(0, 50);
  
   $monsterHealtpoint=$monster->getPointsDeVieMonster();
