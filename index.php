@@ -70,7 +70,7 @@ $users = $newHero->findAllAlive();
 
           foreach ($predefinedImages as $imageSrc) {
               ?>
-            <div class="col-md-2">
+            <div class="col-md-2 shadow hover">
               <button type="submit" name="choisirHero" value="<?php echo $imageSrc; ?>" class="bg-transparent rounded-pill w-75 h-75">
                 <img class="w-100 h-100" src="<?php echo $imageSrc; ?>" alt="">
               </button>
