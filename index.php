@@ -30,7 +30,8 @@ $users = $newHero->findAllAlive();
 <body class="bg-dark background d-flex flex-column justify-content-center align-items-center">
 
   <!-- khorus -->
-  <form action="" method="post" class="d-flex  justify-content-center align-items-center form opacity-75 w-75 ">
+  <form action="" method="post" class="d-flex  justify-content-center align-items-center form opacity-100 w-75 bg-transparent ">
+    <div class="">
     <div class="card text-center  myForm  ">
       <div class="card-header">
         <h1 class="card-title"> Crées votre héros</h1>
@@ -52,6 +53,8 @@ $users = $newHero->findAllAlive();
 
           </select>
         </div>
+        </div>
+  <div class=" text-center d-flex justify-content-center align-items-center"><img src="./assets/poster.webp" alt=""></div>
         <!-- circle -->
         <div class="row mt-5">
           <label for="choisirHero">
@@ -85,8 +88,9 @@ $users = $newHero->findAllAlive();
         </div>
       </div>
     </div>
-  </form>
-
+ 
+</form>
+  
 
   <!-- cart -->
   <div class="d-flex flex-wrap-reverse flex-row justify-content-center align-items-center  text-center m-3 ">
