@@ -4,14 +4,17 @@ class Hero
     private  $name;
     private $type;
     private  $pointsDeVieHero = 100;
+    private $choisirHero;
 
     public function __construct(array $hero){  
         $this->name = $hero['name'];
         $this->type = $hero['type'];
+        $this->choisirHero = $hero['src'];
      
     }
-
-
+    public function getChoisirHero(){
+        return $this->choisirHero;
+    }
 
     public function setId($id){
         $this->id=$id;

@@ -18,9 +18,11 @@
   background-repeat: no-repeat;
   background-size: cover;
  
+ 
     
 }
 .form{
+
     margin-top: 200px;
 }
 .fightPage{
@@ -34,4 +36,9 @@
 .vs{
 width: 100px;
 height: 100px;
+}
+.backcart{
+  background-image: url(./assets/OIP.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }

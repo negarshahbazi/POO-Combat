@@ -12,11 +12,13 @@ class HeroesManager
     public function add(Hero $hero)
     {
 
-        $query = $this->db->prepare("INSERT INTO user (name, health_point,type) VALUES (:name,:health_point,:type) ");
+        $query = $this->db->prepare("INSERT INTO user (name, health_point,type,src) VALUES (:name,:health_point,:type,:src) ");
         $query->execute([
             ':name' =>$hero->getName(),
             ':health_point'=> $hero->getPointsDeVieHero(),
-            ':type'=> $hero->getType()
+            ':type'=> $hero->getType(),
+            ':src'=>$hero->getChoisirHero()
+           
         ]);
         $id = $this->db->lastInsertId();
         $hero->setId($id);

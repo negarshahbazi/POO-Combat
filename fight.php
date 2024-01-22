@@ -3,7 +3,7 @@ require_once('./config/autoload.php');
 require_once('./config/db.php');
 $heroesManager = new HeroesManager($db);
 
-if (isset($_POST['id'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
   $hero = $heroesManager->find($_POST['id']);
   // var_dump($hero);
   }
@@ -35,13 +35,14 @@ $heroesManager->update($hero);
 <div class="container">
   <div class=" d-flex justify-content-evenly align-items-center">
     <div class="">
-      <h1 class="text-white"><?php echo $monster->getNomMonster() ?></h1>
-      <h3 class="text-danger">Type :<?php echo $monster->getType() ?></h3>
-    </div>
-    <div ><img class="w-1" src="./assets/vs;.gif" alt=""></div>
-    <div class="">
-      <h1 class="text-white"><?php echo $hero->getName() ?></h1>
+    <h1 class="text-white"><?php echo $hero->getName() ?></h1>
       <h3 class="text-danger">Type :<?php echo $hero->getType() ?></h3>
+      
+    </div>
+    <div ><a href="./index.php"><img class="w-1" src="./assets/vs;.gif" alt=""></a></div>
+    <div class="">
+    <h1 class="text-white"><?php echo $monster->getNomMonster() ?></h1>
+      <h3 class="text-danger">Type :<?php echo $monster->getType() ?></h3>
     </div>
   </div>
   </div>
@@ -62,8 +63,8 @@ $heroesManager->update($hero);
 <?php } ?>
 <!-- hero and monster -->
   <div class=" d-flex justify-content-center align-items-center">
-    <div class="mb-5"><img class="w-100  image" src="./assets/combat5.gif" alt=""></div>
-    <div class="mb-5"><img class="w-100 image" src="./assets/combat1.gif" alt=""></div>
+    <div class="mb-5"><img class="image" src="<?php echo $hero->getChoisirHero()?>" alt=""></div>
+    <div class="mb-5"><img class="image" src="./assets/monster.gif" alt=""></div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
