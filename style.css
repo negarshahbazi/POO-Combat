@@ -1,13 +1,23 @@
+*{
+  box-sizing: border-box;
+
+}
+
+
+
 .background{
     background-image: url(./assets/backcombat.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
+  
+   
 }
 .myForm{
 
   background-image: url(./assets/khorus.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+ 
     
 }
 .form{
@@ -16,8 +26,12 @@
 .fightPage{
   background-image: url(./assets/backcombat.jpg);
   background-repeat: no-repeat;
-  background-size: cover
+  background-size: cover;
+
+
+ 
 }
-.image{
-/* margin-top: 300px; */
+.vs{
+width: 100px;
+height: 100px;
 }

@@ -29,25 +29,27 @@ $heroesManager->update($hero);
 
 
 
-<body class="fightPage text-center ">
+<body class="fightPage ">
 
-
-  <div class="row d-flex justify-content-center align-items-center">
-    <div class="col-4">
+<!-- vs -->
+<div class="container">
+  <div class=" d-flex justify-content-evenly align-items-center">
+    <div class="">
       <h1 class="text-white"><?php echo $monster->getNomMonster() ?></h1>
       <h3 class="text-danger">Type :<?php echo $monster->getType() ?></h3>
     </div>
-    <div class="col-4"><img src="./assets/vs;.gif" alt=""></div>
-    <div class="col-4">
+    <div ><img class="w-1" src="./assets/vs;.gif" alt=""></div>
+    <div class="">
       <h1 class="text-white"><?php echo $hero->getName() ?></h1>
       <h3 class="text-danger">Type :<?php echo $hero->getType() ?></h3>
     </div>
   </div>
+  </div>
+<!-- report -->
+<?php foreach($fightResults as $fightResult){?>
 
-  <?php foreach($fightResults as $fightResult){?>
-
-<div class="row d-flex justify-content-center align-items-center text-white">
-  <div class="col-4">
+<div class="  d-flex justify-content-center align-items-center text-white">
+  <div class="">
     <ul>
       <li>
         <?php echo $fightResult?>
@@ -58,12 +60,11 @@ $heroesManager->update($hero);
   </div>
 </div>
 <?php } ?>
-
-  <div class="row d-flex justify-content-center align-items-center">
-    <div class="col-4"><img class="w-75 image" src="./assets/combat5.gif" alt=""></div>
-    <div class="col-4"><img class="w-75 image" src="./assets/combat1.gif" alt=""></div>
+<!-- hero and monster -->
+  <div class=" d-flex justify-content-center align-items-center">
+    <div class="mb-5"><img class="w-100  image" src="./assets/combat5.gif" alt=""></div>
+    <div class="mb-5"><img class="w-100 image" src="./assets/combat1.gif" alt=""></div>
   </div>
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
