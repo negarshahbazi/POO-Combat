@@ -30,22 +30,23 @@ $users = $newHero->findAllAlive();
 <body class="bg-dark background d-flex flex-column justify-content-center align-items-center">
 
   <!-- khorus -->
-  <form action="" method="post" class="d-flex  justify-content-center align-items-center form opacity-100 w-75 bg-transparent ">
-    <div class="">
-    <div class="card text-center  myForm  ">
+  
+  <form action="" method="post" class="place d-flex  justify-content-center align-items-center form opacity-100 w-75 bg-transparent ">
+    <div class="container">
+    <div class="card text-center  myForm bg-transparent ">
       <div class="card-header">
-        <h1 class="card-title"> Crées votre héros</h1>
+        <h1 class="card-title text-white"> Crées votre héros</h1>
       </div>
       <div class="d-flex flex-column justify-content-center align-items-center card-body m-5 text-center">
         <div>
           <label for="">
-            <h2 class="">Nom du héros :</h2>
+            <h2 class="text-white">Nom du héros :</h2>
           </label>
           <input type="text" name="name" class="">
         </div>
 
         <div class="d-flex justify-content-center align-items-center ">
-          <h2 class="text-center">Type de héros :</h2>
+          <h2 class="text-center text-white">Type de héros :</h2>
           <select name="type" id="">
             <option value="Guerrier">Guerrier</option>
             <option value="mage">mage</option>
@@ -54,11 +55,10 @@ $users = $newHero->findAllAlive();
           </select>
         </div>
         </div>
-  <div class=" text-center d-flex justify-content-center align-items-center"><img src="./assets/poster.webp" alt=""></div>
         <!-- circle -->
-        <div class="row mt-5">
+        <div class="row ">
           <label for="choisirHero">
-            <h1 class="">Choisir une Héro :</h1>
+            <h1 class="text-white">Choisir un Héro :</h1>
           </label>
 
           <?php
@@ -87,8 +87,9 @@ $users = $newHero->findAllAlive();
 
         </div>
       </div>
+      <div class=" text-center d-flex justify-content-center align-items-center"><img src="./assets/poster.webp" alt=""></div>
     </div>
- 
+
 </form>
   
 
