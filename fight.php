@@ -32,14 +32,14 @@ $heroesManager->update($hero);
 <body class="fightPage ">
 
 <!-- vs -->
-<div class="container">
+<div class="container harif d-flex justify-content-center align-items-center text-center">
   <div class=" d-flex justify-content-evenly align-items-center">
     <div class="">
     <h1 class="text-white"><?php echo $hero->getName() ?></h1>
       <h3 class="text-danger">Type :<?php echo $hero->getType() ?></h3>
       
     </div>
-    <div ><a href="./index.php"><img class="w-1" src="./assets/vs;.gif" alt=""></a></div>
+    <div ><a href="./index.php"><img class="vslogo" src="./assets/vs;.gif" alt=""></a></div>
     <div class="">
     <h1 class="text-white"><?php echo $monster->getNomMonster() ?></h1>
       <h3 class="text-danger">Type :<?php echo $monster->getType() ?></h3>
@@ -62,9 +62,9 @@ $heroesManager->update($hero);
 </div>
 <?php } ?>
 <!-- hero and monster -->
-  <div class=" d-flex justify-content-center align-items-center place">
-    <div class="mb-5"><img class="image w-50" src="<?php echo $hero->getChoisirHero()?>" alt=""></div>
-    <div class="mb-5"><img class="image  w-50" src="./assets/monster.gif" alt=""></div>
+  <div class="row  d-flex justify-content-center align-items-center place">
+    <div class="col mb-5 d-flex justify-content-center align-items-center"><img class="image w-50" src="<?php echo $hero->getChoisirHero()?>" alt=""></div>
+    <div class=" col mb-5 d-flex justify-content-center align-items-center"><img class="image  w-50" src="./assets/monster.gif" alt=""></div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

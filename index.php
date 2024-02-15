@@ -31,7 +31,7 @@ $users = $newHero->findAllAlive();
 
   <!-- khorus -->
   
-  <form action="" method="post" class="place d-flex  justify-content-center align-items-center form opacity-100 w-75 bg-transparent ">
+  <form action="" method="post" class="place d-flex  justify-content-center align-items-center form opacity-100 w-100 bg-transparent ">
     <div class="container">
     <div class="card text-center  myForm bg-transparent ">
       <div class="card-header">
@@ -39,14 +39,14 @@ $users = $newHero->findAllAlive();
       </div>
       <div class="d-flex flex-column justify-content-center align-items-center card-body m-5 text-center">
         <div>
-          <label for="">
+          <label for=""></label>
             <h2 class="text-white">Nom du héros :</h2>
-          </label>
+          
           <input type="text" name="name" class="">
         </div>
 
-        <div class="d-flex justify-content-center align-items-center ">
-          <h2 class="text-center text-white">Type de héros :</h2>
+        <div class="d-flex flex-column justify-content-center align-items-center ">
+          <h2 class="text-center text-white typeofhero">Type de héros :</h2>
           <select name="type" id="">
             <option value="Guerrier">Guerrier</option>
             <option value="mage">mage</option>
@@ -73,7 +73,7 @@ $users = $newHero->findAllAlive();
 
           foreach ($predefinedImages as $imageSrc) {
               ?>
-            <div class="col-md-2 shadow hover">
+            <div class="  col-4 shadow hover">
               <button type="submit" name="choisirHero" value="<?php echo $imageSrc; ?>" class="bg-transparent rounded-pill w-75 h-75">
                 <img class="w-100 h-100" src="<?php echo $imageSrc; ?>" alt="">
               </button>
@@ -87,7 +87,7 @@ $users = $newHero->findAllAlive();
 
         </div>
       </div>
-      <div class=" text-center d-flex justify-content-center align-items-center"><img src="./assets/poster.webp" alt=""></div>
+      <div class=" text-center d-flex justify-content-center align-items-center "><img class="man"src="./assets/poster.webp" alt=""></div>
     </div>
 
 </form>
@@ -97,14 +97,14 @@ $users = $newHero->findAllAlive();
   <div class="d-flex flex-wrap-reverse flex-row justify-content-center align-items-center  text-center m-3 ">
     <?php foreach ($users as $user) { ?>
       <form action="./fight.php" method="post">
-        <div class="card backcart bg-warning-subtle " style="width: 400px;">
+        <div class="card backcart " style="width: 300px;">
           <div class="row">
-            <div class="col-md-6 border-right ">
+            <div class="col-6 border-right ">
               <h5 class="card-title text-danger">Héro existant</h5>
               <img src="<?php echo $user->getChoisirHero()?>" class="img-fluid rounded-start w-50 h-50" alt="...">
             </div>
 
-            <div class="col-md-6 border-left">
+            <div class="col-6 border-left">
               <div class="card-body">
                 <h5 class="card-title text-black"><?php echo $user->getName() ?></h5>
                 <h6 class="card-title text-black">Type:<?php echo $user->getType() ?></h6>

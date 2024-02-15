@@ -6,51 +6,40 @@
   } */
 
 
-*{
+* {
   box-sizing: border-box;
+  /* overflow-x: hidden; */
 
 }
 
 
 
-.background{
-    background-image: url(./assets/backcombat.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-attachment: fixed;
-    background-position: center;
-  
-   
-}
-/* .myForm{
-
-  background-image: url(./assets/khorus.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
- 
- 
-    
-} */
-.form{
-
-    /* margin-top: 200px; */
-}
-.fightPage{
+.background {
   background-image: url(./assets/backcombat.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 
 
- 
 }
-.vs{
-width: 100px;
-height: 100px;
+
+
+
+.fightPage {
+
+  background: linear-gradient(130deg, black, rgb(83, 9, 9))
 }
-.backcart{
+
+.vs {
+  width: 100px;
+  height: 100px;
+}
+
+.backcart {
   background-image: url(./assets/OIP.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 
@@ -58,14 +47,41 @@ height: 100px;
 
 
 
-/* .place{
- 
+.place {
 
-background-image: url(./assets/backcombat.jpg);
-  max-width: 100vw;
-  max-height: 100vh;
-  background-size: cover;
-  background-position: center;
-   background-size: 85%;
-  background-attachment: fixed;
-  background-position: center center;}  */
+  padding-left: 15%;
+
+  padding-right: 15%;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+@media (max-width:700px) {
+  .man {
+    width: 100px;
+    height: auto;
+  }
+
+  .typeofhero {
+    font-size: 20px;
+  }
+
+  .vslogo {
+    width: 100px;
+    height: auto;
+  }
+
+  .harif {
+    font-size: 20px;
+  }
+
+  .background {
+    background: linear-gradient(130deg, black, rgb(250, 0, 0))
+  }
+}
